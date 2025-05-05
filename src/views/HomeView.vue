@@ -30,7 +30,7 @@ Vi vil gøre alt for at sikre, at den sidste afsked bliver så god og mindeværd
       </div>
     </section>
 
-    <!-- Starts -->
+    <!-- Start her område -->
     <div class="container py-5">
       <h2 class="text-center mb-4">Start Her</h2>
       <div class="row justify-content-center">
@@ -48,7 +48,7 @@ Vi vil gøre alt for at sikre, at den sidste afsked bliver så god og mindeværd
       </div>
     </div>
 
-    <!-- Carousel / Slider Section -->
+    <!-- Karousel/slider -->
     <section class="slider-section">
       <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -82,10 +82,10 @@ Vi vil gøre alt for at sikre, at den sidste afsked bliver så god og mindeværd
       </div>
     </section>
 
-    <!-- Zigzag Section -->
-    <section class="zigzag-section py-5">
+    <!-- Zigzag opsæt -->
+    <section class="zigzag-section py-5 mt-5">
       <div class="container">
-        <!-- Block 1 -->
+        <!-- Zig -->
         <div class="row align-items-center mb-5">
           <div class="col-md-6">
             <img :src="pl" class="img-fluid rounded shadow pl-image" alt="Tryghed i processen" />
@@ -105,11 +105,12 @@ Vi har stort fokus på den gode og nærværende samtale, så de efterladte føle
             <a href="#" class="btn-1">Læs mere</a>
           </div>
         </div>
-<hr>
-        <!-- Block 2 -->
+<hr class="mb-5">
+        <!-- Zag -->
         <div class="row align-items-center flex-md-row-reverse">
           <div class="col-md-6">
-            <img :src="pl" class="img-fluid rounded shadow" alt="Personlig afsked" />
+            <img :src="kiste" class="img-fluid rounded shadow mb-5" alt="Personlig afsked" />
+            <img :src="fælles" class="img-fluid rounded shadow mb-5" alt="Personlig afsked" />
           </div>
           <div class="col-md-6">
             <h3 class="mb-3">Kirkelig og borgerlig begravelse
@@ -122,7 +123,7 @@ Vi har stort fokus på den gode og nærværende samtale, så de efterladte føle
             <p class="mb-4"> 
               Du er altid velkommen til en personlig samtale i en af vores begravelsesforretninger. Hvis du ønsker en snak i trygge og velkendte rammer, kan vi også tilbyde at holde samtalen hos dig.
 Vi kan træffes alle ugens dage og træder til, når du har behov for det.
-Kontakt HB-Begravelse for en uforpligtende samtale på telefon 70 70 21 10. Du er også velkommen til at sende en mail til os på info@hb-begravelse.dk eller benytte vores kontaktformular.
+Kontakt HB-Begravelse for en uforpligtende samtale på telefon <strong>70 70 21 10.</strong>  Du er også velkommen til at sende en mail til os på <strong>info@hb-begravelse.dk</strong> eller benytte vores kontaktformular.
             </p>
               
             <a href="#" class="btn-1">Se muligheder</a>
@@ -130,16 +131,23 @@ Kontakt HB-Begravelse for en uforpligtende samtale på telefon 70 70 21 10. Du e
         </div>
       </div>
     </section>
+    <hr class="mt-5">
+    <Emailform />
   </main>
 </template>
 
 <script setup>
+// billeder
 import pl from '@/assets/Aktionsbilleder/bedemandpl.png'
-import banner from '@/assets/Bannerbilleder/omosban.jpg';
 import omos from '@/assets/Aktionsbilleder/Fælles.jpg';
 import esbjerg from '@/assets/Aktionsbilleder/Esbjerg.jpg'
 import hb from '@/assets/Aktionsbilleder/hb.jpg'
 import fælles from '@/assets/Aktionsbilleder/Fælles.jpg'
+import bird from '@/assets/Aktionsbilleder/Birds.jpg'
+import kiste from '@/assets/Aktionsbilleder/Kiste.jpg'
+// banner
+import banner from '@/assets/Bannerbilleder/omosban.jpg';
+import Emailform from '@/components/Emailform.vue';
 
 const examples = [
   {
@@ -180,7 +188,7 @@ const slides = [
   {
     title: 'Altid nærværende',
     text: 'Vi er lokale og tilgængelige hele døgnet.',
-    image: banner,
+    image: bird,
     buttonText: 'Kontakt os',
     link: '#kontakt'
   }
@@ -300,7 +308,8 @@ const slides = [
     }
 
     .box-btn{
-      width: 35%;
+      // knap længde
+      width: 50%; 
     }
 
 </style>

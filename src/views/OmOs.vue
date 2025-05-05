@@ -1,14 +1,14 @@
 <template>
   <div class="about-page">
-    <!-- Hero Section -->
+    <!-- Hero område -->
     <section 
   class="hero d-flex align-items-center text-white text-center"
   :style="{
     backgroundImage: `url(${omos})`
   }"
 >
-  <div class="overlay"></div> <!-- add this -->
-  <div class="container position-relative z-1"> <!-- make sure text is on top -->
+  <div class="overlay"></div> <!-- hero slør -->
+  <div class="container position-relative z-1">
     <h1 class="display-4 fw-bold">Velkommen til HB Begravelse</h1>
     <p class="lead mb-4">Vi hjælper dig trygt igennem hele forløbet med omsorg og respekt.</p>
     <div class="d-flex justify-content-center gap-3">
@@ -18,10 +18,10 @@
   </div>
 </section>
 
-    <!-- Split Section with Image Grid -->
+    <!-- Split Section t-venstre b-højre-->
     <section class="container my-5">
       <div class="row align-items-center">
-        <!-- Text Column -->
+        <!-- Tekst -->
         <div class="col-lg-6 mb-4 mb-lg-0">
           <h2 class="mb-3">Personlig og nærværende hjælp</h2>
           <p>
@@ -34,7 +34,7 @@ Vi lægger stor vægt på at tilbyde en professionel, individuel tilpasset hjæl
           </p>
         </div>
 
-        <!-- Image Grid -->
+        <!-- Billed-Grid -->
         <div class="col-lg-6">
           <div class="image-grid">
             <div class="row g-2">
@@ -53,20 +53,20 @@ Vi lægger stor vægt på at tilbyde en professionel, individuel tilpasset hjæl
       </div>
     </section>
 
-    <!-- Split Section with Accordion -->
+    <!-- Split Section t-venstre b-højre -->
     <section class="bg-light py-5">
       <div class="container">
         <div class="row align-items-center">
-          <!-- Image -->
+          <!-- Billed -->
           <div class="col-lg-6 mb-4 mb-lg-0">
             <img :src="hb" class="img-fluid rounded" alt="Billede 4" />
           </div>
-
+<!-- Import Accordion sektion -->
 <Faq /> 
           </div>
         </div>
     </section>
-    <!-- Team Section -->
+    <!-- Bedemænd -->
 <section class="team-section text-white py-5">
   <div class="container text-center">
     <h2 class="mb-3">Mød vores Bedemænd</h2>
@@ -89,7 +89,7 @@ Vi lægger stor vægt på at tilbyde en professionel, individuel tilpasset hjæl
     </div>
   </div>
 </section>
-<!-- Testimonials Section -->
+<!-- Testimonials -->
 <section class="testimonials-section py-5 bg-light text-center">
   <br><br>
   <div class="container">
@@ -115,7 +115,7 @@ Vi lægger stor vægt på at tilbyde en professionel, individuel tilpasset hjæl
   
       </div>  <br><br>
 
-      <!-- Arrows -->
+      <!-- + pile til carousel -->
       <button
         class="carousel-control-prev bg-white rounded-circle border shadow-sm"
         type="button"
@@ -136,7 +136,7 @@ Vi lægger stor vægt på at tilbyde en professionel, individuel tilpasset hjæl
         <span class="visually-hidden">Next</span>
       </button>
 
-      <!-- Indicators -->
+      <!-- test nr. prikker -->
       <div class="carousel-indicators mt-4">
         <button
           type="button"
@@ -151,17 +151,22 @@ Vi lægger stor vægt på at tilbyde en professionel, individuel tilpasset hjæl
     </div>
   </div>
 </section>
+<!-- import email sektion -->
 <Emailform />
   </div>
 </template>
 
 <script setup>
+// Kontakt form
 import Emailform from '@/components/Emailform.vue';
+// Accordion
 import Faq from '@/components/Faq.vue'
+// billeder
 import kiste from '@/assets/Aktionsbilleder/kiste.jpg';
 import hb from '@/assets/Aktionsbilleder/hb.jpg';
 import esbjerg from '@/assets/Aktionsbilleder/Esbjerg.jpg';
 import birds from '@/assets/Aktionsbilleder/Birds.jpg';
+// banner billed
 import omos from '@/assets/Bannerbilleder/omosban.jpg';
 //bedemænd
 import bjarne from '@/assets/Bedemænd/Bjarne.jpg';
@@ -226,7 +231,7 @@ const testimonials = [
   .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.367); // Adjust darkness as needed
+    background: rgba(0, 0, 0, 0.367); // Hero Slør 
     z-index: 0;
   }
 
@@ -258,7 +263,7 @@ const testimonials = [
   font-weight: 500;
 }
 .team-section {
-  background-color: var(--color-gold); // gold tone – customizable
+  background-color: var(--color-gold);
 }
 
 .team-member h5 {

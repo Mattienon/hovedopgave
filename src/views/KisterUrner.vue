@@ -5,8 +5,8 @@
     backgroundImage: `url(${omos})`
   }"
 >
-  <div class="overlay"></div> <!-- add this -->
-  <div class="container position-relative z-1"> <!-- make sure text is on top -->
+  <div class="overlay"></div> <!-- hero slør -->
+  <div class="container position-relative z-1"> 
     <h1 class="display-4 fw-bold">Velkommen til HB Begravelse</h1>
     <p class="lead mb-4">Vi hjælper dig trygt igennem hele forløbet med omsorg og respekt.</p>
     <div class="d-flex justify-content-center gap-3">
@@ -16,10 +16,11 @@
   </div>
 </section>
       <!-- <Produkter /> -->
-       <!-- Vi Tilbyder Section -->
+       <!-- Vi Tilbyder Sektion -->
 <div class="container py-5 mt-5 text-center">
   <h2 class="mb-4">Vi Tilbyder</h2>
   <div class="row justify-content-center">
+    
     <!-- Kister & Urner -->
     <div class="col-md-3 col-sm-6 mb-4">
       <div class="card h-100 shadow-sm">
@@ -66,7 +67,7 @@
     <a href="#kontakt" class="btn-2 px-4">Skriv besked</a>
   </div>
 
-  <!-- Small Description -->
+  <!-- Mini beskrivelse -->
   <p class="mt-3 text-muted px-3">
     Vi står klar til at hjælpe dig med alt det praktiske. Kontakt os, hvis du har spørgsmål eller har brug for vejledning.
   </p>
@@ -75,7 +76,7 @@
 <div class="slanted-edge">
   <h2 class="text-center z-1">Produkter & Priser</h2>
 <p class="text-center z-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <!-- Category Filter Buttons -->
+      <!-- Kat. filter knapper -->
       <div class="mb-5 px-5">
         <h5>Filter efter kategori</h5>
         <div class="d-flex flex-wrap gap-2">
@@ -91,7 +92,7 @@
         </div>
       </div>
   
-      <!-- Product Cards -->
+      <!-- Produkter v-for -->
       <div class="row px-5 z-10 products">
         <div
           v-for="product in filteredProducts"
@@ -112,7 +113,8 @@
         </div>
       </div>
     </div>
-      <!-- Øvrige ydelser Card -->
+
+      <!-- Øvrige ydelser -->
 <div class="d-flex justify-content-center mt-5">
   <div class="card text-center shadow-sm" style="max-width: 600px; width: 100%;">
     <div class="card-body">
@@ -148,14 +150,20 @@
       </div>
       <br><br>
       <hr>
+
+      <!-- import af priseksempler -->
       <Priseksempler />
+
   </template>
   
   <script setup>
+
+  // banner
   import omos from '@/assets/Bannerbilleder/rustvogne.jpg';
+  // import Priseksempler
   import Priseksempler from '@/components/priseksempler.vue'
-import Produkter from '@/components/produkter.vue'
 import { ref, computed } from 'vue'
+
 // kister BILLEDER
 import img1 from '@/assets/Kister/beg-1.jpg'
 import img2 from '@/assets/Kister/beg-2.jpg'
@@ -229,17 +237,18 @@ import Burne from '@/assets/Kister/b-urne.jpg'
      { id: 41, name: 'BeyondLife urne – Himmelblå', category: 'BeyondLife Urner', price: 1525, image: Burne},
      { id: 42, name: 'BeyondLife urne – Mos grøn', category: 'BeyondLife Urner', price: 1525, image: Burne},
     ])
-  // Auto-generate categories
+
+  // Genererer nye kategorier når de dukker op / auto
   const categories = computed(() => {
     return [...new Set(products.value.map(p => p.category))]
   })
   
-  // Filtered products by selected category
+  // Filter via ativ kategori
   const filteredProducts = computed(() => {
     return products.value.filter(p => p.category === selectedCategory.value)
   })
   
-  // Just select a category (no toggle logic)
+
   function selectCategory(cat) {
     selectedCategory.value = cat
   }
@@ -319,7 +328,7 @@ ul li {
   box-shadow: 0 1px 3px rgba(80, 80, 80, 0.5);
   background-color: var(--color-white);
 }
-
+// skrå CSS shape
 .slanted-edge {
   --p: 100px;
   height: 100%;
@@ -362,7 +371,7 @@ ul li {
   }
 }
 
-// Responsivt spacing mellem cards
+// margin m. kort
 @media (min-width: 768px) {
   .row > div {
     margin-bottom: 2rem;

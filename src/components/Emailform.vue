@@ -1,11 +1,11 @@
 <template>
     <div>
-<!-- Contact Section -->
+<!-- Kontakt  -->
 <section class="contact-section py-5 bg-white">
   <div class="container">
     <div class="row g-5 align-items-start">
       
-      <!-- Left column -->
+      <!-- Venstre col -->
       <div class="col-12 col-lg-6">
         <h2 class="mb-3">Kontakt os – helt uforpligtende</h2>
         <p>
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <!-- Right column: Form -->
+      <!-- højre col: form -->
       <div class="col-12 col-lg-6">
         <form @submit.prevent="handleSubmit">
           <div class="mb-3">
@@ -58,10 +58,10 @@ const form = reactive({
 })
 
 function handleSubmit() {
-  // For now, just log the form (replace with actual API logic if needed)
+  // bliver kun logged da der lige pt ikke er en mail at sende den til
   console.log('Form submitted:', form)
 
-  // Optionally reset form
+  // resetter formen
   form.name = ''
   form.email = ''
   form.phone = ''
@@ -71,7 +71,7 @@ function handleSubmit() {
 
 <style lang="scss" scoped>
 .contact-section {
-  background-color: #f8f9fa; // Light gray for gentle contrast
+  background-color: #f8f9fa;
   .form-label {
     font-weight: 500;
   }

@@ -1,7 +1,8 @@
 <template>
   <nav
     ref="navbar"
-    class="navbar navbar-expand-lg w-100 fixed-top transition-navbar"
+    
+    class="navbar navbar-expand-lg w-100 fixed-top transition-navbar" 
   >
     <div class="container">
       <a class="navbar-brand" href="/">
@@ -38,7 +39,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/print">Printable</a>
           </li>
-          <!-- Add the "Kontakt Os" button -->
+          <!-- "Kontakt Os" knap-->
           <li class="nav-item">
             <a class="nav-link btn btn-primary" href="/kontakt">Kontakt Os</a>
           </li>

@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue';
 import Foots from './components/Foots.vue';
 </script>
@@ -22,7 +22,7 @@ import Foots from './components/Foots.vue';
 </template>
 
 <style scoped>
-/* Basic fade-in only */
+/* Virker kun på om os+ forside fordi hvorfor ikke */
 .fade-enter-active {
   transition: opacity 0.5s ease;
 }

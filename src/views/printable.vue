@@ -6,7 +6,7 @@
       Her finder du Print Produkter lavet ud fra HB-Begravelses nuværende materiale
     </p>
     <a
-      href="https://github.com/Mattienon"
+      href="https://github.com/Mattienon/hovedopgave"
       target="_blank"
       class="btn btn-outline-light btn-lg mt-3"
     >
@@ -29,10 +29,11 @@
                 <img v-if="box.image" :src="box.image" alt="PDF preview" class="img-fluid mb-3 rounded" />
                 <h5>{{ box.title }}</h5>
                 <p class="mb-0">
-  <i class="bi bi-download me-2"></i>{{ box.content }}
-</p>
+                  <i class="bi bi-download me-2"></i>{{ box.content }}
+                </p>
               </div>
             </a>
+
             <div v-else class="p-4 text-center bg-light border rounded shadow-sm h-100">
               <img :src="box.image" alt="Box image" class="img-fluid mb-3 rounded" />
               <h5>{{ box.title }}</h5>
@@ -47,8 +48,9 @@
 
 
 <script setup>
+// print import og thumbnail
 import pdf1 from '@/assets/skoleprint/begravelseshjælp.pdf'
-import pdfThumbnail1 from '@/assets/skoleprint/pdf1-thumbnail.png' // or .png
+import pdfThumbnail1 from '@/assets/skoleprint/pdf1-thumbnail.png' 
 import pdf2 from '@/assets/skoleprint/Huskeliste.pdf'
 import pdfThumbnail2 from '@/assets/skoleprint/pdf2-thumbnail.png'
 import pdf3 from '@/assets/skoleprint/Ved-dødsfald.pdf'

@@ -1,7 +1,8 @@
 <template>
-        <!-- Text + Accordion -->
+        <!-- Tekst + Accordion -->
         <div class="col-lg-6">
             <h2 class="mb-3">Vores Værdier</h2>
+            <p>Tryk på pilene for at udvide felterne.</p>
             <div class="accordion" id="faqAccordion">
               <div
                 v-for="(item, index) in faqs"
@@ -32,7 +33,7 @@
                 </div>
               </div>
             </div>
-              <!-- Buttons -->
+              <!-- Knap knap  -->
               <div class="mt-4 d-flex gap-3">
               <a href="tel:70702110" class=" btn-1">70 70 21 10</a>
               <a href="#" class="btn-2">Skriv besked</a>
@@ -73,7 +74,7 @@ const faqs = [
 }
 
 .accordion-button:not(.collapsed) {
-  /* You can keep this if you want open state styling different */
+  /* lil' shine filter */
   filter: brightness(1.05);
 }
 

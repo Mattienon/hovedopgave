@@ -1,6 +1,6 @@
 <template>
     <div>
-<!-- Pris Eksempler Section -->
+<!-- Pris Eksempler -->
 <div class="container py-5">
   <h2 class="text-center mb-4">Pris Eksempler</h2>
   <div class="row justify-content-center">
@@ -70,7 +70,7 @@
 
 <style lang="scss" scoped>
 .card {
-  background: linear-gradient(to bottom, var(--color-gold), var(--color-light-gold)); // Gradient fra top til bund
+  background: linear-gradient(to bottom, var(--color-gold), var(--color-light-gold)); // gradient fra top til bund
   border: none;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
@@ -100,7 +100,7 @@
   }
 }
 
-// Responsivt spacing mellem cards
+// kort split
 @media (min-width: 768px) {
   .row > div {
     margin-bottom: 2rem;
