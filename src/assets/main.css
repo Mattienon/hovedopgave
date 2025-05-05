@@ -1,0 +1,101 @@
+@import './base.css';
+
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --color-dark: #323232;
+  --color-gold: #e0bc5f;
+  --color-light-gold: #f0e1b8;
+  --color-white: #ffffff;
+}
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+  min-height: 100vh;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--color-gold);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+
+/* Buttons TYPES */
+.btn-1 {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  border-radius: 7px;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border: none;
+  transition: background-color 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-light-gold);
+    color: var(--color-dark);
+  }
+}
+
+.btn-2 {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 7px;
+  background-color: transparent;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+  }
+}
+.btn-2-white {
+  text-decoration: none;
+  /* bruger montserrat i stedet for proxima nova da den clasher med firebase deploy command */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 7px;
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+  }
+}
