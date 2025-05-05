@@ -82,9 +82,12 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .navbar {
   width: 100%;
-  padding: 0.6rem 1rem;
-  transition: all 0.3s ease;
+  padding: 0.3rem 1rem;
+  transition: all 0.3s ease; //shrink transition
+  background-color: rgba(255, 255, 255, 0.137);
+  backdrop-filter: blur(4px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 800;
 
   &.navbar-shrink {
     padding: 0.1rem 1rem;
@@ -94,22 +97,12 @@ onUnmounted(() => {
     
   }
 
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 1.75rem;
-    color: #ffffff;
-
-    &:hover {
-      color: #f8f9fa;
-    }
-  }
-
   .nav-link {
-    color: #323232 !important;
     transition: color 0.2s ease-in-out;
+    font-weight: bold;
 
     &:hover {
-      color: #ffffff;
+      color: var(--color-gold);
     }
 
     &.active {
@@ -121,8 +114,8 @@ onUnmounted(() => {
 .navbar .btn {
   font-weight: bold;
   padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  background-color: #e0bc5f;
+  border-radius: 50px;
+  background-color: var(--color-gold);
   color: #ffffff;
   transition: background-color 0.3s ease;
 
