@@ -17,7 +17,7 @@
 </section>
       <!-- <Produkter /> -->
        <!-- Vi Tilbyder Sektion -->
-<div class="container py-5 mt-5 text-center">
+<div class="container py-5 mt-3 text-center">
   <h2 class="mb-4">Vi Tilbyder</h2>
   <div class="row justify-content-center">
     
@@ -79,11 +79,11 @@
       <!-- Kat. filter knapper -->
       <div class="mb-5 px-5">
         <h5>Filter efter kategori</h5>
-        <div class="d-flex flex-wrap gap-2">
+        <div class="d-flex flex-wrap gap-1">
             <button
             v-for="cat in categories"
             :key="cat"
-            class="btn-1 rounded-pill px-4"
+            class="btn-1 rounded-pill px-3"
             :class="selectedCategory === cat ? 'btn-1-active' : 'btn-2-active'"
             @click="selectCategory(cat)"
             >
@@ -93,7 +93,7 @@
       </div>
   
       <!-- Produkter v-for -->
-      <div class="row px-5 z-10 products">
+      <div class="row px-3 z-10 products">
         <div
           v-for="product in filteredProducts"
           :key="product.id"
@@ -115,7 +115,7 @@
     </div>
 
       <!-- Øvrige ydelser -->
-<div class="d-flex justify-content-center mt-5">
+<div class="d-flex justify-content-center">
   <div class="card text-center shadow-sm" style="max-width: 600px; width: 100%;">
     <div class="card-body">
       <h4 class="card-title text-muted">Øvrige ydelser</h4>
@@ -341,7 +341,7 @@ ul li {
 
 
 .card {
-  background: var(--color-light-gold);
+  background: var(--color-white);
   border: none;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -371,10 +371,38 @@ ul li {
   }
 }
 
-// margin m. kort
+/* margin m. kort */
 @media (min-width: 768px) {
   .row > div {
     margin-bottom: 2rem;
+  }}
+
+@media (max-width: 768px) {
+  .slanted-edge {
+    --p: 100px;
+    height: 100%;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--p)));
+    background: linear-gradient(to bottom, var(--color-gold), white);
+    z-index: 0;
+    padding: 1rem 0; //giver luft i top + bottom men ikke hor
+  }
+  .slanted-edge h5 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .d-flex.flex-wrap.gap-1 {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .btn-1,
+  .btn-2-active {
+    width: 100%; 
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
   }
 }
+
   </style>

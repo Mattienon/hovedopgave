@@ -21,9 +21,8 @@
     <section class="cta-section text-white text-center py-5">
       <div class="container">
         <h2 class="mb-3">Begravelseshjælp, der gør en forskel</h2>
-        <p class="mb-4">KHB-Begravelse er en lokal bedemandsforretning bestående af Bjarne Christensen, Henrik Kristensen, Majbritt Franzen og Betty Jensen.</p>
-<p>Vi tilbyder omsorgsfuld hjælp og personlig rådgivning til både kirkelig og borgerlig begravelse i Esbjerg,  Oksbøl, Varde, Guldager, Ribe, Arnum, Toftlund, Skærbæk, Løgumkloster og Haderslev. Vi kan hjælpe med alt det praktiske i forbindelse med begravelser og bisættelser i hele Sydvestjylland og Sønderjylland.
-Vi vil gøre alt for at sikre, at den sidste afsked bliver så god og mindeværdig som mulig. En afsked helt efter dine og afdødes ønsker.</p>
+        <p class="mb-4">HB-Begravelse er en lokal bedemandsforretning bestående af Bjarne Christensen, Henrik Kristensen, Majbritt Franzen og Betty Jensen.</p>
+<p>Vi tilbyder omsorgsfuld hjælp og personlig rådgivning til både kirkelig og borgerlig begravelse i Esbjerg,  Oksbøl, Varde, Guldager, Ribe, Arnum, Toftlund, Skærbæk, Løgumkloster og Haderslev. En afsked helt efter dine og afdødes ønsker.</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
           <a href="tel:70702110" class="btn-2-white">Læs Mere</a>
         </div>
@@ -309,7 +308,7 @@ const slides = [
 
     .box-btn{
       // knap længde
-      width: 50%; 
+      width: 60%; 
     }
 
 </style>
